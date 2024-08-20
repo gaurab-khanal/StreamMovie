@@ -1,6 +1,7 @@
 import { getTrendingMovies } from "@/lib/api/movieAPI/movieAPI";
 import { ITrendingMovies } from "@/types/movie/movieTypes";
 import { useEffect, useState } from "react"
+import { Outlet } from "react-router-dom";
 
 const Hello = () => {
   const [data, setData] = useState<ITrendingMovies>();
@@ -20,6 +21,7 @@ const Hello = () => {
   return (
     <div>
     hello
+    <Outlet/>
     {
       data?.results[0].title
     }
