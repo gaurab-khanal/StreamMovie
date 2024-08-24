@@ -1,12 +1,11 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom"
-
-import Hello from "./pages/Hello"
-import Home from "./pages/Home"
+import Home from "./pages/home/Home"
+import Layout from "./pages/layout"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         
-        <Route path="/" element={<Hello />}>
+        <Route path="/" element={<Layout />}>
             <Route path="/home" element={<Home />} />
         </Route>
     )

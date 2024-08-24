@@ -1,17 +1,19 @@
+import MobileSideBar from "@/components/layout/Sidebar/MobileSideBar";
+import SideBar from "@/components/layout/Sidebar/SideBar";
 import { getTrendingMovies } from "@/lib/api/movieAPI/movieAPI";
 import { ITrendingMovies } from "@/types/movie/movieTypes";
 import { useEffect, useState } from "react"
 import { Outlet } from "react-router-dom";
 
-const Hello = () => {
+const Layout = () => {
   const [data, setData] = useState<ITrendingMovies>();
- 
-  useEffect(()=>{
+
+  useEffect(() => {
     const fetchData = async () => {
       const response = await getTrendingMovies();
-     
-        setData(response.data);
-      
+
+      setData(response.data);
+
 
       console.log(response);
     }
@@ -19,14 +21,17 @@ const Hello = () => {
   }, [])
 
   return (
-    <div>
-    hello
-    <Outlet/>
-    {
-      data?.results[0].title
-    }
+    <div className="bg-black">
+      <div className="md:block hidden">
+
+        <SideBar />
+      </div>
+      <div className="md:hidden block">
+        <MobileSideBar />
+      </div>
+      <Outlet />
     </div>
   )
 }
 
-export default Hello
+export default Layout

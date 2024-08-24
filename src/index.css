@@ -61,11 +61,15 @@
   }
 }
 
+html {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-foreground;
   }
 }

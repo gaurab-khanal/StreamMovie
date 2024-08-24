@@ -1,7 +1,7 @@
 import { AiOutlineHeart, AiOutlineStar } from "react-icons/ai";
 import { FiHome, FiSearch } from "react-icons/fi";
 
-const NavBarItems = [
+export const NavBarItems = [
   {
     name: "Home",
     icon: <FiHome />,
