@@ -1,3 +1,4 @@
+import GoogleSignIn from "@/components/GoogleSignIn"
 import { Button } from "@/components/ui/button"
 import { MdMenu } from "react-icons/md"
 
@@ -15,9 +16,7 @@ const MobileSideBar = () => {
         </h3>
       </div>
       <div className="flex items-center justify-center gap-3">
-        <Button className="px-4 py-1 h-[30px] text-[13px] border-gray-400 rounded-full bg-none" variant={"outline"}>
-          Sign In
-        </Button>
+       <GoogleSignIn/>
         <MdMenu className="text-white/90 cursor-pointer text-2xl"/>
 
       </div>
