@@ -10,16 +10,16 @@ export const NavBarItems = [
   {
     name: "Search",
     icon: <FiSearch />,
-    path: "/search/",
+    path: "/home/search/",
   },
   {
     name: "Favorites",
     icon: <AiOutlineHeart />,
-    path: "/favorites/",
+    path: "/home/favorites/",
   },
   {
     name: "Top Rated Shows",
     icon: <AiOutlineStar />,
-    path: "/top-rated/",
+    path: "/home/top-rated/",
   },
 ];

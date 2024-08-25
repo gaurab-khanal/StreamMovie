@@ -9,8 +9,8 @@ const GoogleSignIn = ({ isMenuCLick }: { isMenuCLick: boolean }) => {
           isMenuCLick ?
             <div className="md:flex items-center gap-2  text-md">
               <FcGoogle className="hidden md:block w-6 h-6" />
-            </div> :
-
+            </div>
+            :
             <div className="md:flex items-center gap-2  text-md">
               <FcGoogle className="hidden md:block w-6 h-6" />
               <h2 className="hidden md:block">Sign in with google</h2>
