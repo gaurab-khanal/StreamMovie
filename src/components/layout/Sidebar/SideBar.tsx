@@ -10,7 +10,7 @@ const SideBar = () => {
     const navigate = useNavigate();
 
     return (
-        <div className={`h-screen flex items-center flex-col justify-between border-black md:border-r-gray-dark/50 p-5 md:border-r-[0.5px] bg-black  sm:w-[70px] transition-all ${!isMenuClick && 'md:w-[230px]'} ${isMenuClick && 'md:w-[70px]'}`}>
+        <div className={`h-screen flex items-center  flex-col justify-between border-black md:border-r-gray-dark/50 p-5 md:border-r-[0.5px] bg-black  sm:w-[70px] transition-all ${!isMenuClick && 'md:w-[230px]'} ${isMenuClick && 'md:w-[70px]'}`}>
             <div className="flex flex-col justify-center items-start gap-10">
                 <header className="flex gap-3 items-center  justify-start">
                     <div

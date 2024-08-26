@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react"
 import Card from "./Card";
 import RightSidebarLoading from "@/components/skeletons/RightSideBarSkeleton";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const TopRatedSideBar = () => {
     const [loading, setLoading] = useState(false);
@@ -65,12 +66,12 @@ const TopRatedSideBar = () => {
                     />
                 ))
             }
-            <button
+            <Button
                 onClick={handleTopRatedNavigation}
-                className="px-4 py-2 bg-red rounded-lg w-full text-white"
+                className="px-4 py-2 text-lg/2 bg-red hover:bg-red/80 rounded-lg w-full text-white"
             >
                 See more
-            </button>
+            </Button>
         </div>
     )
 }

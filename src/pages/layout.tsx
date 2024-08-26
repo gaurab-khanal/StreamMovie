@@ -8,14 +8,14 @@ const Layout = () => {
 
   return (
     <div className="bg-black flex md:flex-row flex-col">
-      <div className="md:block hidden">
+      <div className="md:block fixed   hidden">
 
         <SideBar />
       </div>
-      <div className="md:hidden block">
+      <div className="md:hidden block ">
         <MobileSideBar />
       </div>
-      <div className="p-5 w-full">
+      <div className="py-5 w-full sm:pl-[calc(70px+ 10px)] md:pl-[calc(230px+30px)]">
         <Outlet />
       </div>
       <div className="lg:block hidden">
