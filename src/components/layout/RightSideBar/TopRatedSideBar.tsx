@@ -13,6 +13,7 @@ const TopRatedSideBar = () => {
     const [category, setCategory] = useState('movie'); // just for proto. will be replaced by state management
     const getTopRatedShow = useCallback(async () => {
         setLoading(true);
+        setCategory('movie')
         try {
             if (category === 'movie') {
 

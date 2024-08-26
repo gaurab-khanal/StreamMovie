@@ -15,7 +15,7 @@ const Layout = () => {
       <div className="md:hidden block ">
         <MobileSideBar />
       </div>
-      <div className="py-5 w-full sm:pl-[calc(70px+ 10px)] md:pl-[calc(230px+30px)]">
+      <div className="py-5 w-full sm:pl-[calc(70px+ 10px)] pl-5 md:pl-[calc(230px+30px)]">
         <Outlet />
       </div>
       <div className="lg:block hidden">
