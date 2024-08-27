@@ -1,14 +1,15 @@
+import useMenuToggleStore from "@/store/useMenuToggleStore";
 import { Link, useLocation } from "react-router-dom";
 
 interface IMenuProps {
     name: string;
     icon: JSX.Element;
     path: string;
-    isMenuCLick: boolean;
 }
 
-const MenuItem = ({ name, icon, path, isMenuCLick }: IMenuProps) => {
+const MenuItem = ({ name, icon, path }: IMenuProps) => {
     const { pathname } = useLocation();
+    const {isMenuToggle:isMenuCLick}= useMenuToggleStore();
 
     return (
         <Link to={path} className="flex gap-4  hover:text-white items-center cursor-pointer text-gray-light">
