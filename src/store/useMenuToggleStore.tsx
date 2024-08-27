@@ -8,7 +8,9 @@ interface IinitialState {
 const useMenuToggleStore = create<IinitialState>((set)=>(
     {
         isMenuToggle: false,
-        toggleMenu: ()=>set((state)=>({isMenuToggle: !state.isMenuToggle}))
+        toggleMenu: ()=>{
+         set((state)=>({isMenuToggle: !state.isMenuToggle}))
+        }
     }
 ))
 
