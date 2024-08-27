@@ -13,10 +13,10 @@ const MenuItem = ({ name, icon, path }: IMenuProps) => {
 
     return (
         <Link to={path} className="flex gap-4  hover:text-white items-center cursor-pointer text-gray-light">
-            <span className={`text-lg ${pathname.split('/')[2]?.startsWith(path.split('/')[2]) && 'text-red'}`}>
+            <span className={`text-lg ${pathname.split('/')[1]?.startsWith(path.split('/')[1]) && 'text-red'}`}>
                 {icon}
             </span>
-            <div className={`${isMenuCLick && "hidden"} ${pathname.split('/')[2]?.startsWith(path.split('/')[2]) && 'text-white'}`}>{name}</div>
+            <div className={`${isMenuCLick && "hidden"} ${pathname.split('/')[1]?.startsWith(path.split('/')[1]) && 'text-white'}`}>{name}</div>
         </Link>
     )
 }

@@ -9,10 +9,11 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route path="/" element={<Navigate to="/home/movies" />} />
-            <Route path="/home/movies" element={<Home />} />
-            <Route path="/home/search" element={<Search />} />
-            <Route path="/home/favorites/" element={<Favourites />} />
-            <Route path="/home/top-rated/" element={<TopRatedShows />} />
+            <Route path="/home" element={<Navigate to="/home/movies" />} />
+            <Route path="/home/:type" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/favorites/" element={<Favourites />} />
+            <Route path="/top-rated/" element={<TopRatedShows />} />
         </Route>
 
     )

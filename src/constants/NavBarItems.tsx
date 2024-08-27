@@ -5,21 +5,21 @@ export const NavBarItems = [
   {
     name: "Home",
     icon: <FiHome />,
-    path: "/home/movies",
+    path: "/home",
   },
   {
     name: "Search",
     icon: <FiSearch />,
-    path: "/home/search/",
+    path: "/search/",
   },
   {
     name: "Favorites",
     icon: <AiOutlineHeart />,
-    path: "/home/favorites/",
+    path: "/favorites/",
   },
   {
     name: "Top Rated Shows",
     icon: <AiOutlineStar />,
-    path: "/home/top-rated/",
+    path: "/top-rated/",
   },
 ];

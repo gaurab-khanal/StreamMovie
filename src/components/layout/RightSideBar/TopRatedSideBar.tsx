@@ -4,18 +4,18 @@ import Card from "./Card";
 import RightSidebarLoading from "@/components/skeletons/RightSideBarSkeleton";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import useType from "@/store/useType";
 
 const TopRatedSideBar = () => {
     const [loading, setLoading] = useState(false);
     const [topRatedShow, setTopRatedShow] = useState<any[]>([]);
     const navigate = useNavigate();
+    const type= useType((state)=>state.type);
 
-    const [category, setCategory] = useState('movie'); // just for proto. will be replaced by state management
     const getTopRatedShow = useCallback(async () => {
         setLoading(true);
-        setCategory('movie')
         try {
-            if (category === 'movie') {
+            if (type === 'movies') {
 
                 const res = await getTopRatedMovies(1);
                 const threeMovies: any[] = [];
@@ -37,7 +37,7 @@ const TopRatedSideBar = () => {
             setLoading(false);
         }
 
-    }, [category])
+    }, [type])
 
     useEffect(() => {
         getTopRatedShow();
@@ -45,7 +45,7 @@ const TopRatedSideBar = () => {
 
     const handleTopRatedNavigation = () => {
         navigate(
-            category === "movie" ? "home/top-rated/" : "home/top-rated/"
+            type === "movies" ? "/top-rated/movies" : "/top-rated/tv"
         );
     };
 
