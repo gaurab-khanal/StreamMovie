@@ -5,7 +5,6 @@ import { ISingleTrendingMovie } from "@/types/movie/movieTypes"
 import { ISingleTrendingTv } from "@/types/tv/tvTypes"
 import { useCallback, useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { DialogDemo } from "./DIalog";
 
 interface IGenres {
     id: number;
