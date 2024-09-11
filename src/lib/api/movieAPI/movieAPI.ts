@@ -36,4 +36,12 @@ export const getSimilarMovies = async (movieId: number) => {
     return response;    
 }
 
+export const getSingleMovie = async (movieId: number) => {
+    const response = await axiosInstance.get(`/movie/${movieId}?append_to_response=credits&language=en-US`);
+    return response;    
+}
 
+export const getSingleTv = async (tvId: number) => {
+    const response = await axiosInstance.get(`/tv/${tvId}?append_to_response=credits&language=en-US`);
+    return response;    
+}

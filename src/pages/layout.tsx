@@ -20,7 +20,7 @@ const Layout = () => {
         <MobileSideBar />
       </div>
 
-      <div className={`py-5 flex flex-col gap-10 w-full pl-5 ${isMenuToggle ? 'md:pl-[100px]' : 'md:pl-[260px]'}`}>
+      <div className={`py-5 flex flex-col gap-4  w-full pl-5 ${isMenuToggle ? 'md:pl-[100px] ' : 'md:pl-[260px] '}`}>
         <Header />
         <Outlet />
       </div>

@@ -51,7 +51,7 @@ const TopRatedSideBar = () => {
 
     return (
         <div className="flex flex-col gap-3">
-            <h2 className=" text-white">Top Rated Shows</h2>
+            <h2 className=" text-white">Top Rated {type === 'movies' ? 'Movies' : 'TV Shows'}</h2>
             {loading ?
                 <RightSidebarLoading />
                 :
